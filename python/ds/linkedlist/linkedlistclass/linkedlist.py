@@ -54,4 +54,38 @@ class LinkedList:
             else:
                 curr_node = curr_node.next
 
-        
+    def delete_node_value(self, data):
+        curr_node = self.head
+
+        if curr_node and curr_node.data == data:
+            self.head = curr_node.next
+            curr_node = None
+
+        prev_node = None
+        while curr_node:
+            if curr_node.data == data:
+                prev_node.next = curr_node.next
+                curr_node = None
+                return
+            else:
+                prev_node = curr_node
+                curr_node = curr_node.next
+
+    def delete_node_pos(self, pos):
+        curr_node = self.head
+        count = 1
+
+        if curr_node and pos == 0:
+            self.head = curr_node.next
+            curr_node = None
+            return
+
+        while curr_node:
+            if count == pos:
+                prev_node.next = curr_node.next
+                curr_node = None
+            else:
+                prev_node = curr_node
+                curr_node = curr_node.next
+                count += 1
+     

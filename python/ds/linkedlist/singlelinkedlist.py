@@ -8,6 +8,12 @@ def main():
     linked_list.prepend("D")
     linked_list.insert_after("B", "C")
     linked_list.print_list()
+    linked_list.delete_node_value("C")
+    linked_list.print_list()
+    linked_list.delete_node_value("D")
+    linked_list.print_list()
+    linked_list.delete_node_pos(3)
+    linked_list.print_list()
 
 if __name__ == "__main__":
     main()
