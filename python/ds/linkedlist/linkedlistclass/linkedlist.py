@@ -193,10 +193,22 @@ class LinkedList:
         else:
             s.next = q
         
-        return self.head = new_head
+        self.head = new_head
+        return self.head
 
-            
+    def remove_duplicates(self):
+        curr = self.head
+        is_number = dict()
+        prev = None
 
+        while curr:
+            if curr.data in is_number:
+                prev.next = curr.next
+                curr = None
+            else:
+                is_number[curr.data] = 1
+                prev = curr
+            curr = prev.next
 
-
+        
         
