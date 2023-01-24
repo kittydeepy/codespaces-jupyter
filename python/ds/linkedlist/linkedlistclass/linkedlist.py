@@ -93,7 +93,7 @@ class LinkedList:
         if node is None:
             return 0
         return 1 + self.length_of_list_rec(node.next)
-     
+
     def length_of_list(self):
         curr_node = self.head
         count = 0
@@ -103,26 +103,26 @@ class LinkedList:
             count += 1
 
         return count
-    
+
     def swap_nodes(self, key_1, key_2):
 
         if key_1 == key_2:
-            return 
+            return
 
-        prev_1 = None 
-        curr_1 = self.head 
+        prev_1 = None
+        curr_1 = self.head
         while curr_1 and curr_1.data != key_1:
-            prev_1 = curr_1 
+            prev_1 = curr_1
             curr_1 = curr_1.next
 
-        prev_2 = None 
-        curr_2 = self.head 
+        prev_2 = None
+        curr_2 = self.head
         while curr_2 and curr_2.data != key_2:
-            prev_2 = curr_2 
+            prev_2 = curr_2
             curr_2 = curr_2.next
 
         if not curr_1 or not curr_2:
-            return 
+            return
 
         if prev_1:
             prev_1.next = curr_2
@@ -144,7 +144,7 @@ class LinkedList:
             curr.next = prev
             prev = curr
             curr = nxt
-            
+
         self.head = prev
 
     def reverse_list_rec(self):
@@ -192,7 +192,7 @@ class LinkedList:
             s.next = p
         else:
             s.next = q
-        
+
         self.head = new_head
         return self.head
 
@@ -210,5 +210,88 @@ class LinkedList:
                 prev = curr
             curr = prev.next
 
+    def nth_to_last(self, n):
+        total_len = self.length_of_list()
+        curr = self.head
+        while curr:
+            if total_len == n:
+                return curr.data
+            else:
+                total_len -= 1
+                curr = curr.next
+        if curr is None:
+            return
+
+    def rotate(self, k):
+        p = self.head
+        q = self.head
+        prev = None
+        count = 0
+
+        while count < k and p:
+            prev = p
+            p = p.next
+            q = q.next
+            count -= 1
+
+        p = prev
+
+        while q:
+            prev = q
+            q = q.next
+        q = prev
+
+        prev.next = self.head
+        self.head = p.next
+        p = None
+
+    def is_palindrome_str(self):
+        s = ""
+        p = self.head
+        while p:
+            s += p.data
+            p = p.next
         
+        return s == s[::-1]
+    
+    def is_palindrome_stack(self):
+        p = self.head
+        s = []
+
+        while p:
+            s.append(p.data)
+            p = p.next
+        p = self.head
+        while p:
+            if p.data != s.pop():
+                return False
+            p = p.next
         
+        return True
+
+    def is_palindrome_pointer(self):
+        if self.head:
+            p = self.head
+            q = self.head
+            s = []
+            count = 0
+
+            while q:
+                s.append(q)
+                q = q.next
+                count += 1
+            q = s[count - 1]
+
+            i = 1
+            while i <= count/2 + 1:
+                if p.data == s[-i].data:
+                    p = p.next
+                    i += 1
+                else:
+                    return False
+        else:
+            return True
+
+            
+        
+
