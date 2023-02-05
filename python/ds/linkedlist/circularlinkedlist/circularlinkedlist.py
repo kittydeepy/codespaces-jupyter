@@ -78,9 +78,10 @@ class CircularLinkedList:
             while curr_node.next != self.head:
                 prev = curr_node
                 curr_node = curr_node.next
-                if curr_node.data == key:
+                if curr_node == node:
                     prev.next = curr_node.next
-                    #curr_node = curr_node.next
+                    curr_node = curr_node.next
+
     def __len__(self):
         curr_node = self.head
         count = 0
@@ -120,6 +121,21 @@ class CircularLinkedList:
         print("\n")
         split_list.print_list()
 
+    def josephcircle(self, step):
+        curr_node = self.head
+        length = len(self)
+        while length > 1:
+            count = 1
+            while count != step:
+                curr_node = curr_node.next
+                count += 1
+            print(f"KILLED: {curr_node.data}")
+            self.remove_node(curr_node)
+            length -= 1
+
+
+
+
 
 
 
@@ -128,7 +144,14 @@ clist.append(2)
 clist.append(4)
 clist.append(6)
 clist.append(8)
+clist.append(12)
+clist.append(14)
+clist.append(16)
+clist.append(18)
 clist.print_list()
 print("-------------------")
-clist.split_list()
+#clist.split_list()
+clist.josephcircle(2)
+print("-------------------")
+clist.print_list()
 print("-------------------")
