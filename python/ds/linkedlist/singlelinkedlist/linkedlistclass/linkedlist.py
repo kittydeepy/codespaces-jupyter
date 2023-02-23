@@ -292,6 +292,21 @@ class LinkedList:
         else:
             return True
 
-            
+def reverselinkedlist(self):
+    prev = None
+    curr = self.head
+    nxt = self.head.next
+
+    while curr:
+        curr.next = prev
+        prev = curr
+        curr = nxt
+        nxt = nxt.next
+    self.head = curr
+    
+
+
+
+               
         
 
