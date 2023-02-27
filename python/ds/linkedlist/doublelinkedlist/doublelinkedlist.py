@@ -93,8 +93,31 @@ class DoubleLinkedList:
                     curr_node = None
 
             curr_node = curr_node.next
+    
+    def remove_duplicate(self,data):
+        curr_node = self.head
+        seen = dict()
+        while curr_node:
+            if curr_node.data not in seen:
+                seen[curr_node.data] = 1
+                curr_node = curr_node.next
+            else:
+                self.remove_duplicate(curr_node.data)
+                curr_node = curr_node.next
+    
+    def pair_sum(self, sum):
+        pair1 = self.head
+        pair2 = None
+        combination_list = list()
 
-
+        while pair1:
+            pair2 = pair1.next
+            while pair2:
+                if pair1.data + pair2.data == sum:
+                    combination_list.append("(" + str(pair1.data) +"," + str(pair2.data) +")")
+                pair2 = pair2.next
+            pair1 = pair1.next
+        return combination_list
 
     
     def add_node_before(self, key , data):
