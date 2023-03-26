@@ -1,6 +1,6 @@
 # Table of Contents
-1. [Data structure and Algorithm](#DSA)
-2. [Design patterns](#CloudPatterns)
+- [Data structure and Algorithm](#DSA)
+- [Design patterns](#CloudPatterns)
 ## Data Structure and Algorithm <a name="DSA"><a/>
 ### Array
     1. Single dimensional arrays 
@@ -44,3 +44,7 @@
 
 ## Cloud design patterns<a name="CloudPattterns"><a/>
 *  https://learn.microsoft.com/en-us/azure/architecture/patterns/ 
+*  https://12factor.net/
+*  https://martinfowler.com/articles/richardsonMaturityModel.html
+*  https://refactoring.guru/design-patterns
+*  https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
