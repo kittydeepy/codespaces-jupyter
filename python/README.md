@@ -1,4 +1,6 @@
-# Data structure and Algorithm.
+# Table of Contents
+1. [Data structure and Algorithm](#DSA)
+## Data Structure and Algorithm <a name="DSA"><a/>
 ## Array
     1. Single dimensional arrays 
     2. Multi dimensional arrays 
