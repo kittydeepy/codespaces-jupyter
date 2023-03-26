@@ -1,24 +1,25 @@
 # Table of Contents
 1. [Data structure and Algorithm](#DSA)
+2. [Design patterns](#CloudPatterns)
 ## Data Structure and Algorithm <a name="DSA"><a/>
-## Array
+### Array
     1. Single dimensional arrays 
     2. Multi dimensional arrays 
-## LinkedList
+### LinkedList
     3. Singly linked list
     4. Doubly linked list
     5. Circular doubly linked list
-## Hash map
+### Hash map
     6. Hash map
     7. Hash set 
-## Heap
+### Heap
     8. Min and max heap
-## Stack
+### Stack
     9. Stack 
-## Queue
+### Queue
     10. Queue 
     11. Circular queue
-## Tree
+### Tree
     12. Tree
     13. Binary tree
     14. Binary search tree 
@@ -27,10 +28,10 @@
     17. Trie 
     18. Merkle tree 
     19. B and B+ tree
-## Graph
+### Graph
     20. Graph
 
-# Algorithm
+### Algorithm
     * Queue add/remove
     * Stack add/remove
     * Single and doubly linked list add/insert/delete
@@ -40,3 +41,6 @@
     * Insert into and remove from heap.
     * Graph DFS, BFS, Topological Sorting, Cycle detection in directed and undirected graph 
     * Tree in order/pre order/post order traversal, reverse the tree, level order traversal 
+
+## Cloud design patterns<a name="CloudPattterns"><a/>
+*  https://learn.microsoft.com/en-us/azure/architecture/patterns/ 
