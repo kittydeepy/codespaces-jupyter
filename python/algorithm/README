@@ -9,8 +9,8 @@
 - Worst case: Big O
     
 ## General tips
--    Every time a list or array gets iterated over c×lengthc×length times, it is most likely in O(n)O(n) time.
--    When you see a problem where the number of elements in the problem space gets halved each time, that will most probably be in O(logn)O(logn) runtime.
+-    Every time a list or array gets iterated over c×length times, it is most likely in O(n) time.
+-    When you see a problem where the number of elements in the problem space gets halved each time, that will most probably be in O(logn) runtime.
 -    Whenever you have a singly nested loop, the problem is most likely in quadratic time.
 
     Usecases:
