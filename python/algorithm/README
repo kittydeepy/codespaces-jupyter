@@ -1,0 +1,50 @@
+** Time and Space complexity **
+
+![Mindmap for complexity](./picture.drawio.svg)
+
+- Best Case: Big Omega f(n) = c.g(n)
+    * Mathematically, a function f(n)f(n) is in Ω(g(n))Ω(g(n)) if there exists a real constant c>0c>0 and there exists no>0no​>0 such that f(n)≥cg(n)f(n)≥cg(n) for n≥non≥no​. In other words, for sufficiently large values of nn, f(n)f(n) will grow at least as fast as g(n)g(n).
+- Average Case: Big Theta : Sandwich of lower and upper bound
+    * So Big Theta is an ‘asymptotically tight bound’. When a particular running time is Θ(g(n))Θ(g(n)), the running time is at least c1g(n)c1​g(n) and at most, c2g(n)c2​g(n), i.e., it is sandwiched between two functions.
+- Worst case: Big O
+    
+## General tips
+-    Every time a list or array gets iterated over c×lengthc×length times, it is most likely in O(n)O(n) time.
+-    When you see a problem where the number of elements in the problem space gets halved each time, that will most probably be in O(logn)O(logn) runtime.
+-    Whenever you have a singly nested loop, the problem is most likely in quadratic time.
+
+    Usecases:
+    - Simple loop:
+        for x in range(n):
+            # statement(s) that take constant time
+        Running time complexity = n = O(n)
+        So n is first 0, then 1, then 2, …, then n-1. This means the loop runs a total of n times, hence the running time complexity is n.
+    - For loop with increments
+        for x in range(1,n,k):
+            # statement(s) that take constant time
+        Running time complexity = floor(nk) = O(n)
+    - Simple nested for loop
+        for i in range(n):
+            for x in range(m):
+            #Statement(s) that take(s) constant time
+        Running time complexity = n×m=O(nm)
+    - Nested for loop with dependant variables
+        for i in range(n):
+            for j in range(i):
+        Running time complexity = (n−1)((n−1)+1))/2​ = O(n^2)
+    - Nested for loop with index modification
+        for i in range(n):
+            i*=2
+            for x in range(i):
+                # Statement(s) that take(s) constant time
+        Running time complexity = n(n−1)=O(n^2)
+    - Loops with log(n) time complexity
+        i = #constant
+        n = #constant
+        k = #constant
+        while i < n:
+            i*=k
+            # Statement(s) that take(s) constant time
+        Running time complexity = log⁡k(n) = O(log⁡k(n))
+
+
