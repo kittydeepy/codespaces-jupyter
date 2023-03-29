@@ -46,6 +46,10 @@
             i*=k
             # Statement(s) that take(s) constant time
         Running time complexity = log⁡k(n) = O(log⁡k(n))
+	
+	- Sorting Complexity:
+		- Selection sort: Time=O(n^2), Space=O(1)
+		- Bubble sort: O(n^2), Space=O(1)
 
 ** End of the File ** 
 
