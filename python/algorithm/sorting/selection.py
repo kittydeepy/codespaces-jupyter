@@ -1,5 +1,6 @@
 """
-Time complexity: O(n^2)
+Time complexity:
+    - Best, Average, Worst:O(n^2)
 Space complexity: O(1)
 """
 def selection_sort(nums):
