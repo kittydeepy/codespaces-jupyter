@@ -27,3 +27,8 @@
         - External sort: Use external memory like hard disk
     - Non Camprison (Linear)
         - Bucket, Radix, Counting
+
+            Insertion Sort 	    Selection Sort 	    Merge Sort 	    Quick Sort 	    Bubble Sort 	    Insertion Sort
+Best Case       Ω(n) 	         Ω(n2)  	        Ω(nlog(n)) 	    Ω(nlog(n)) 	    Ω(n^2)               Ω(n)
+Average Case 	θ(n2) 	         θ(n2)              θ(nlog(n)) 	    θ(nlog(n)) 	    θ(n2) 	             θ(n2)
+Worst Case 	    O(n2) 	         O(n2) 	            O(nlog(n))      O(nlog(n)) 	    O(n2) 	        	 O(n2)
