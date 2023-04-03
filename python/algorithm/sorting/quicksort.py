@@ -37,3 +37,9 @@ def quicksort(lst, left, right):
 
         quicksort(lst, left, pivot-1)
         quicksort(lst, pivot+1, right)
+
+if __name__ == "__main__":
+    lst = [3,2,1,7,6,5,4]
+    quicksort(lst)
+    print(lst)
+    
